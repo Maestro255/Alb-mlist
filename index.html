@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<style>
+  body{
+    background-color: goldenrod;
+  }
+  button{
+    width:45px;
+    height: 45px;
+    border:none;
+    border-radius: 50%;
+    margin:2px;
+  }
+  .display{
+    background-color: lightyellow;
+    height: 45px;
+    width:80%;
+    margin-bottom: 14px;
+    color:green;
+    font-size: 40px;
+    font-weight: bold
+  }
+</style>
+<body>
+<div class="display">
+  
+</div>
+<div>
+  <button onclick="calculation(1)">1</button>
+    <button onclick="calculation(2)">2</button>
+      <button onclick="calculation(3)">3</button>
+        <button onclick="calculation('-')">-</button>
+</div>
+
+<div>
+  <button onclick="calculation(4)">4</button>
+    <button onclick="calculation(5)">5</button>
+      <button onclick="calculation(6)">6</button>
+        <button onclick="calculation('+')">+</button>
+</div>
+
+<div>
+  <button onclick="calculation(7)">7</button>
+    <button onclick="calculation(8)">8</button>
+      <button onclick="calculation(9)">9</button>
+        <button onclick="calculation('/')">÷</button>
+</div>
+
+<div>
+  <button onclick="
+  let answer; 
+   answer = eval(equation);
+   equation = answer;
+  display.innerHTML = equation
+  ">=</button>
+    <button onclick="calculation(0)">0</button>
+      <button onclick="
+      equation=''
+      display.innerHTML=equation
+      ">clear</button>
+        <button onclick="calculation('*')">×</button>
+</div>
+
+<button onclick="
+calculation('**');
+">
+√
+</button>
+<script>
+
+const display = document.querySelector('.display')
+  
+  let equation = '';
+  
+  function calculation (value) {
+    equation = equation+value;
+     display.innerHTML = equation;
+  }
+</script>
+</body>
+
+</html>
